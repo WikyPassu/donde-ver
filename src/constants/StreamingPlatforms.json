@@ -1,0 +1,23 @@
+[
+  { "id": "all4", "name": "Channel 4", "src": "assets/streaming-icons/channel4.png" },
+  { "id": "apple", "name": "Apple TV", "src": "assets/streaming-icons/appletv.png" },
+  { "id": "britbox", "name": "BritBox", "src": "assets/streaming-icons/britbox.png" },
+  { "id": "crave", "name": "Crave", "src": "assets/streaming-icons/crave.png" },
+  { "id": "curiosity", "name": "Curiosity", "src": "assets/streaming-icons/curiosity.png" },
+  { "id": "disney", "name": "Disney+", "src": "assets/streaming-icons/disneyplus.png" },
+  { "id": "hbo", "name": "HBOmax", "src": "assets/streaming-icons/hbomax.png" },
+  { "id": "hotstar", "name": "Disney Hotstar", "src": "assets/streaming-icons/disneyhotstar.png" },
+  { "id": "hulu", "name": "Hulu", "src": "assets/streaming-icons/hulu.png" },
+  { "id": "iplayer", "name": "BBC Iplayer", "src": "assets/streaming-icons/bbciplayer.png" },
+  { "id": "mubi", "name": "MUBI", "src": "assets/streaming-icons/mubi.png" },
+  { "id": "netflix", "name": "Netflix", "src": "assets/streaming-icons/netflix.png" },
+  { "id": "now", "name": "NOW TV", "src": "assets/streaming-icons/nowtv.png" },
+  { "id": "paramount", "name": "Paramount+", "src": "assets/streaming-icons/paramountplus.png" },
+  { "id": "peacock", "name": "Peacock", "src": "assets/streaming-icons/peacock.png" },
+  { "id": "prime", "name": "Prime Video", "src": "assets/streaming-icons/primevideo.png" },
+  { "id": "showtime", "name": "Showtime", "src": "assets/streaming-icons/showtime.png" },
+  { "id": "stan", "name": "Stan.", "src": "assets/streaming-icons/stan.png" },
+  { "id": "starz", "name": "STARZ", "src": "assets/streaming-icons/starz.png" },
+  { "id": "wow", "name": "WOW TV", "src": "assets/streaming-icons/wowtv.png" },
+  { "id": "zee5", "name": "ZEE5", "src": "assets/streaming-icons/zee5.png" }
+]
