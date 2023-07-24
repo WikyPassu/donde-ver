@@ -2,9 +2,9 @@ import Platform from "./Platform";
 
 const ShowInfo = ({show, setCurrentShow}) => {
   const {
-    type, title, originalTitle, overview,
-    streamingInfo, backdropURL, genres, posterURL,
-    runtime, year, firstAirYear, lastAirYear,
+    type, title, originalTitle, overview, creators,
+    streamingInfo, backdropURL, genres, cast, posterURL,
+    runtime, year, firstAirYear, lastAirYear, directors,
     seasonCount, episodeCount 
   } = show;
 
@@ -69,25 +69,43 @@ const ShowInfo = ({show, setCurrentShow}) => {
               </> : null
             }
             {
-            year ?
-            <>
-              <h5>AÑO DE ESTRENO</h5>
-              <p>{year}</p>
-            </> :
-            <>
-              <h5>PRIMER Y ÚLTIMO AÑO AL AIRE</h5>
-              <p>{`${firstAirYear} - ${lastAirYear}`}</p>
-            </>
-          }
-          <h5>GÉNEROS</h5>
-          <p>{genres}</p>
-          {
-            runtime ?
-            <>
-              <h5>DURACIÓN</h5>
-              <p>{`${runtime} minutos`}</p>
-            </> : null
-          }
+              year ?
+              <>
+                <h5>AÑO DE ESTRENO</h5>
+                <p>{year}</p>
+              </> :
+              <>
+                <h5>PRIMER Y ÚLTIMO AÑO AL AIRE</h5>
+                <p>{`${firstAirYear} - ${lastAirYear}`}</p>
+              </>
+            }
+            <h5>GÉNEROS</h5>
+            <p>{genres}</p>
+            {
+              runtime ?
+              <>
+                <h5>DURACIÓN</h5>
+                <p>{`${runtime} minutos`}</p>
+              </> : null
+            }
+            {
+              type === "movie" && directors ?
+              <>
+                <h5>DIRECTOR/ES</h5>
+                <p>{directors}</p>
+              </> : type === "series" && creators ?
+              <>
+                <h5>CREADOR/ES</h5>
+                <p>{creators}</p>
+              </> : null
+            }
+            {
+              cast ?
+              <>
+                <h5>ELENCO</h5>
+                <p>{cast}</p>
+              </> : null
+            }
           </div>
         </div>
       </div>

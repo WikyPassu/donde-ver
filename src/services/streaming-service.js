@@ -16,7 +16,7 @@ export const searchByTitle = async (title, showType) => {
     const { result } = await res.json();
     
     let shows = [];
-    console.log(result);
+    
     for (const item of result) {
       let show = {};
 
@@ -24,7 +24,9 @@ export const searchByTitle = async (title, showType) => {
       show.title = item.title;
       show.originalTitle = item.originalTitle
       show.overview = item.overview;
-      
+      show.genres = translateGenres(item.genres.map(genre => genre.id));
+      show.cast = item.cast.join(", ");
+
       if(item.streamingInfo && item.streamingInfo.us) {
         show.streamingInfo = transformStreamingPlatforms(Object.keys(item.streamingInfo.us));
       }
@@ -32,17 +34,17 @@ export const searchByTitle = async (title, showType) => {
       if(item.backdropURLs && item.backdropURLs.original) {
         show.backdropURL = item.backdropURLs.original;
       }
-
-      show.genres = translateGenres(item.genres.map(genre => genre.id));
       
       if(item.posterURLs && item.posterURLs.original) {
         show.posterURL = item.posterURLs.original;
       }
       
       if (showType === "movie") {
+        show.directors = item.directors.join(", ");
         show.year = item.year;
         show.runtime = item.runtime;
       } else {
+        show.creators = item.creators.join(", ");
         show.firstAirYear = item.firstAirYear;
         show.lastAirYear = item.lastAirYear;
         show.seasonCount = item.seasonCount;
@@ -51,7 +53,6 @@ export const searchByTitle = async (title, showType) => {
 
       shows.push(show);
     }
-    console.log(shows);
     return shows;
   } catch(e) {
     console.log(e);
