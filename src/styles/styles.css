@@ -8,11 +8,11 @@
   border: none;
   outline: none;
   font-family: "Poppins", sans-serif;
-  user-select: none;
+  /*user-select: none;
   -webkit-user-drag: none;
   -webkit-tap-highlight-color: transparent;
   -moz-tap-highlight-color: transparent;
-  -ms-tap-highlight-color: transparent;
+  -ms-tap-highlight-color: transparent;*/
 }
 
 :root {
