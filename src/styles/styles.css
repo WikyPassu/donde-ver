@@ -261,7 +261,7 @@ input[type="text"]:focus {
 .shows-grid {
   display: grid;
   justify-content: center;
-  height: 80%;
+  height: 50%;
   gap: 1.5rem;
 }
 
