@@ -8,11 +8,6 @@
   border: none;
   outline: none;
   font-family: "Poppins", sans-serif;
-  /*user-select: none;
-  -webkit-user-drag: none;
-  -webkit-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent;
-  -ms-tap-highlight-color: transparent;*/
 }
 
 :root {
@@ -44,6 +39,19 @@ h5, span {
 
 h5 {
   margin-top: .5rem;
+}
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(to bottom, var(--bg-color), #000);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-color);
+  border-radius: 1rem;
 }
 
 .container {
@@ -277,7 +285,7 @@ input[type="text"]:focus {
   transition: .5s ease;
 }
 
-.show-poster:hover {
+.show-poster:hover, .show-poster.current {
   border: .15rem solid var(--main-color);
 }
 
@@ -286,7 +294,7 @@ input[type="text"]:focus {
   transition: .5s ease;
 }
 
-.show-poster:hover img {
+.show-poster:hover img, .show-poster.current img {
   transform: scale(1.1);
 }
 
@@ -303,7 +311,7 @@ input[type="text"]:focus {
   transition: .5s ease;
 }
 
-.show-poster:hover .layer-poster {
+.show-poster:hover .layer-poster, .show-poster.current .layer-poster {
   opacity: 100%;
 }
 

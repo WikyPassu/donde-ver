@@ -14,12 +14,13 @@ export const searchByTitle = async (title, showType) => {
   try {
     const res = await fetch(url, options);
     const { result } = await res.json();
-    
+
     let shows = [];
     
     for (const item of result) {
       let show = {};
 
+      show.imdbId = item.imdbId;
       show.type = item.type;
       show.title = item.title;
       show.originalTitle = item.originalTitle
@@ -50,9 +51,10 @@ export const searchByTitle = async (title, showType) => {
         show.seasonCount = item.seasonCount;
         show.episodeCount = item.episodeCount;
       }
-
+      
       shows.push(show);
     }
+    
     return shows;
   } catch(e) {
     console.log(e);

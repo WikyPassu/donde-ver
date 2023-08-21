@@ -70,7 +70,12 @@ const ShowsList = ({search, shows, currentShow, setCurrentShow}) => {
         <div className="shows-grid" style={gridStyle}>
           {
             shows.map((show, index) => (
-              <ShowPoster key={index} show={show} setCurrentShow={setCurrentShow} />
+              <ShowPoster 
+                key={index} 
+                show={show} 
+                currentShow={currentShow} 
+                setCurrentShow={setCurrentShow} 
+              />
             ))  
           }
         </div>

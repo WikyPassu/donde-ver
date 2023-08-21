@@ -1,5 +1,5 @@
-const ShowPoster = ({show, setCurrentShow}) => {
-  const { title, posterURL } = show;
+const ShowPoster = ({show, currentShow, setCurrentShow}) => {
+  const { imdbId, title, posterURL } = show;
 
   const handleOnClickShowPoster = () => {
     setCurrentShow(show);
@@ -10,7 +10,10 @@ const ShowPoster = ({show, setCurrentShow}) => {
   };
 
   return (
-    <div className="show-poster" onClick={handleOnClickShowPoster}>
+    <div 
+      className={`show-poster ${imdbId === currentShow?.imdbId ? "current" : ""}`} 
+      onClick={handleOnClickShowPoster}
+    >
       <img 
         src={posterURL ? posterURL : "assets/poster404.png"} 
         alt="" 
