@@ -336,6 +336,22 @@ input[type="text"]:focus {
   border: .15rem solid #fff;
 }
 
+.attribution {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  background: #000;
+  width: 100%;
+  padding: .1rem;
+  z-index: 100;
+}
+
+.attribution p {
+  font-size: .8rem;
+}
+
 /* BREAKPOINTS */
 
 @media (max-width: 1680px) {

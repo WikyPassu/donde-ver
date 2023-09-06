@@ -41,6 +41,13 @@ const App = () => {
           setCurrentShow={setCurrentShow} 
         />
       </div>
+      <footer className="attribution">
+        <p>La información de disponibilidad de transmisión la proporciona Streaming Availability API de 
+          <a href="https://www.movieofthenight.com/about/api" target="_blank">
+            <span> Movie of the Night</span>
+          </a>
+        </p>
+      </footer>
     </div>
   );
 };
